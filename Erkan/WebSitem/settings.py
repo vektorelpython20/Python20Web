@@ -25,7 +25,7 @@ SECRET_KEY = 'bxltescp8mn@=kfglyzr^*2r(!x+dhut4zif-a#t)^ybeiilru'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
