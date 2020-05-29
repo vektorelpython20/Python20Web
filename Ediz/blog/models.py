@@ -7,14 +7,11 @@ class GonderiModel(models.Model):
     yazi = models.TextField()
     email = models.EmailField(verbose_name="E Posta")
     olus_zaman = models.DateTimeField(default=timezone.now)
-    yayim_zaman =models.DateTimeField(blank=True,null=True)
+    yayim_zaman = models.DateTimeField(blank=True,null=True)
 
     def yayimla(self):
-        self.yayim_zaman =timezone.now()
+        self.yayim_zaman = timezone.now()
         self.save()
-
+        
     def __str__(self):
         return self.baslik
-
-
-
