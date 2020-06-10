@@ -1,5 +1,7 @@
-Merhaba Buraya Kadar Geldim
+{% extends "../cerceve.html" %}
+{%block content %}
 {% for gonderi in gonderis %}
 <h1>{{gonderi.baslik}}</h1>
 <p>{{gonderi.yazi}}</p>
 {% endfor %}
+{%endblock%}
