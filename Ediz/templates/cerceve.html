@@ -18,9 +18,17 @@
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
+					<li><a href="{% url 'AnaSayfa' %}">Ana Sayfa</a></li>
+					<li><a href="{% url 'bloglistele' %}">Blog</a></li>
+					<li>{% if user.is_authenticated %}
+					<span style="color:#fff">Merhaba {{ user.username }}!</span>
+						<p><a href="{% url 'logout' %}">Çıkış</a></p>
+						{% else %}
+						<p>Giriş Yapılmamış</p>
+						<a href="{% url 'login' %}">Giriş Yap</a>/
+						<a href="{% url 'signup' %}">Kayıt Yap</a>
+						{% endif %}
+					</li>
 				</ul>
 			</nav>
 
